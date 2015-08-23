@@ -1,0 +1,50 @@
+
+1. In the Linux Command line terminal, compile all 3 programs udpclient.c , sampleproxy.c and tcpserver.c. 
+
+Commands :	javac TCPServer.java
+		javac TCPUDPProxy.java
+		javac UDPClient.java
+
+
+You will get the executable files. 
+
+
+Copy all the executable files to cs1.utdallas.edu
+Login to all the UTD machines using ssh. 
+
+Net01 : java TCPServer 5000
+Net02 : java TCPUDPProxy net02 5000 net01 5000 net02 5001
+Net03 : java UDPClient net02 5000 R 
+
+
+For TCPServer : 
+
+java TCPServer PORT_NUMBER
+
+For TCPUDPProxy : 
+
+java TCPUDPProxy HOST_NAME HOST_PORT_NUMBER SERVER_NAME SERVER_PORT_NUMBER HOST_NAME HOST_SERVER_PORT_NUMBER
+
+For UDPClient : 
+
+java UDPClient PROXY_NAME PROXY_PORT_NUMBER COLOR_LETTER 
+
+
+TYPES OF COLOR_LETTERS :
+
+R : Red
+B : Blue
+G : Green
+Y : Yellow
+O : Orange
+
+
+
+After execution of all the programs : 
+
+Use the following command : 
+
+sh cleanupacn.sh
+
+
+Thank you. 
